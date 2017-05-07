@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html>
+    <head>
+
+        <title> 
+            Email Ispend
+        </title>
+
+        <style type="text/css">
+            div {
+                height: 200px;
+                width: 400px;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                margin-top: -100px;
+                margin-left: -200px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function validator(form) {
+                var password = form.psd.value;
+                if (password == "ispendjntuh") {
+					alert("Welcome");
+                } else {
+                    alert("Invalid Password");
+                }
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <div>
+            <h2 style="text-align:center">Enter Password</h2>
+            <center>
+                <form method="POST" name="myForm" action = "send_email.php">
+                    <table>
+                        <tr>
+                            <td><input type="password" name="psd" size="20"></td>
+                        </tr>
+                    </table>
+                    <p><input type="button" value="submit" name = "submit" id="submitButton" onclick="validator(this.form)">
+                </form>
+            </center>
+        </div>
+    </body>
+</html>
+
